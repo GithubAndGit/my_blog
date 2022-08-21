@@ -1,0 +1,135 @@
+{% extends '_base.html' %}
+
+{% block content %}
+    <main class="main" role="main">
+    <div class="content">
+        <article id="post-visual-studio-code-personal-use-plug-in-colation" class="article article-type-post" itemscope
+                 itemtype="http://schema.org/BlogPosting">
+            <div class="article-header"><h1 class="article-title" itemprop="name">Visual Studio Code个人使用插件整理</h1>
+                <div class="article-meta"><span class="article-date"><i class="icon icon-calendar-check"></i> <a
+                        href="/2017/12/17/visual-studio-code-personal-use-plug-in-colation.html" class="article-date"><time
+                        datetime="2017-12-17T10:32:51.000Z" itemprop="datePublished">2017-12-17</time></a></span> <span
+                        class="article-category"><i class="icon icon-folder"></i> <a class="article-category-link"
+                                                                                     href="/categories/开发工具/">开发工具</a></span>
+                    <span class="article-tag"><i class="icon icon-tags"></i> <a class="article-tag-link"
+                                                                                href="/tags/工具/">工具</a></span> <span
+                            class="article-read hidden-xs"><i class="icon icon-eye-fill" aria-hidden="true"></i> <span
+                            id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span></span></span>
+                    <span class="post-comment"><i class="icon icon-comment"></i> <a
+                            href="/2017/12/17/visual-studio-code-personal-use-plug-in-colation.html#comments"
+                            class="article-comment-link">评论</a></span> <span class="post-wordcount hidden-xs"
+                                                                             itemprop="wordCount">字数统计: 1,453(字)</span>
+                    <span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5(分)</span></div>
+            </div>
+            <div class="article-entry marked-body" itemprop="articleBody">
+                {{ article.content|safe }}
+            </div>
+            <div class="article-footer">
+                <blockquote class="mt-2x">
+                    <ul class="post-copyright list-unstyled">
+                        <li class="post-copyright-link hidden-xs"><strong>本文链接：</strong> <a
+                                href="https://blog.cofess.com/2017/12/17/visual-studio-code-personal-use-plug-in-colation.html"
+                                title="Visual Studio Code个人使用插件整理" target="_blank" rel="external">https://blog.cofess.com/2017/12/17/visual-studio-code-personal-use-plug-in-colation.html</a>
+                        </li>
+                        <li class="post-copyright-license"><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a
+                                href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank"
+                                rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+                        </li>
+                    </ul>
+                </blockquote>
+                <div class="panel panel-default panel-badger">
+                    <div class="panel-body">
+                        <figure class="media">
+                            <div class="media-left"><a href="https://github.com/cofess" target="_blank"
+                                                       class="img-burn thumb-sm visible-lg"><img
+                                    src="/static/img/avatar.jpg" class="img-rounded w-full" alt=""></a></div>
+                            <div class="media-body"><h3 class="media-heading"><a href="https://github.com/cofess"
+                                                                                 target="_blank"><span
+                                    class="text-dark">Cofess</span><small class="ml-1x">Web Developer &amp;
+                                Designer</small></a></h3>
+                                <div>喜欢新事物，关注前端动态，对新的技术有追求； 喜欢产品，喜欢设计，喜欢 coding。</div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <section id="comments"></section>
+    </div>
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+            <ul class="pager pull-left">
+                <li class="prev"><a href="{{ previous_article.url }}" title="{{ previous_article.url }}"><i class="icon icon-angle-left"
+                                                                                         aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+                </li>
+                <li class="next"><a href="{{ next_article.url }}"
+                                    title="{{ next_article.url }}"><span>下一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a></li>
+                <li class="toggle-toc"><a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc"
+                                          aria-expanded="false" title="文章目录" role="button"><span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i> <i class="text-in icon icon-close"></i>
+                    <span>]</span></a></li>
+            </ul>
+            <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal"
+                    data-target="#donateModal"><span>赏</span></button>
+            <div class="bar-right">
+                <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                     data-mobile-sites="weibo,qq,qzone"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content donate">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="donate-box">
+                        <div class="donate-head"><p>感谢您的支持，我会继续努力的!</p></div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+                                <div class="donate-payimg"><img src="/images/donate/alipayimg.png" alt="扫码支持"
+                                                                title="扫一扫"></div>
+                                <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+                                <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p></div>
+                            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+                                <div class="donate-payimg"><img src="/images/donate/wechatpayimg.png" alt="扫码支持"
+                                                                title="扫一扫"></div>
+                                <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+                                <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p></div>
+                        </div>
+                        <div class="donate-footer">
+                            <ul class="nav nav-tabs nav-justified" role="tablist">
+                                <li role="presentation" class="active"><a href="#alipay" id="alipay-tab" role="tab"
+                                                                          data-toggle="tab" aria-controls="alipay"
+                                                                          aria-expanded="true"><i
+                                        class="icon icon-alipay"></i> 支付宝</a></li>
+                                <li role="presentation"><a href="#wechatpay" role="tab" id="wechatpay-tab"
+                                                           data-toggle="tab" aria-controls="wechatpay"
+                                                           aria-expanded="false"><i class="icon icon-wepay"></i>
+                                    微信支付</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script src="/static/js/md5.min.js"></script>
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+            clientID: '8b5ad33723eaf4c311db',
+            clientSecret: '7087e7a934da0a3264a572df4724b23e79912d3f',
+            repo: 'my_blog_comment',    // 仓库名(保存所有评论的仓库名字)
+            owner: 'HEDSCD',  // 用户名
+            admin: ['HEDSCD'],
+            id: md5(location.pathname),      // 保证当前id是唯一的而且长度要小于50(Ensure uniqueness and length less than 50)
+                                            // 这里用路径md5hash签名后生成的值作为文章在github仓库中的唯一标识
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+        gitalk.render("comments")
+    </script>
+{% endblock %}
