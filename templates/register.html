@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>酷炫登陆界面</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+<form action="/register/" method="get">
+    {% csrf_token %}
+   <div class="login">
+       <div id="branding">
+       {% block header %}<h2>用户注册</h2>{% endblock %}
+           </div>
+       <div class="login_box">
+           <!-- required就是不能为空，必须在css效果中有很大的作用 -->
+           <input autocomplete="off" name="username" type="text" required="required">
+           <label id="username" for="username">用户名</label>
+       </div>
+       <div class="login_box">
+           <input name="password" type="password" required="required">
+           <label id="password" for="password">密码</label>
+       </div>
+       <a>
+           <input type="submit" style="background-color:transparent;border-style:none;color: #0c7cd5;font-size: 20px;" value="注册">
+           <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+       </a>
+       <a href="../" style="font-size: 1px" class="text-success "><ins>返回登录</ins></a>
+    </div>
+    </form>
+<script src="/static/js/jquery.min.js" type="text/javascript"></script>
+<script src="/static/js/login.js" defer></script>
+</body>
+</html>

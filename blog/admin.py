@@ -1,7 +1,12 @@
 from django.contrib import admin
-from .models import Article, Category, Tag
+from .models import Article, Category, Tag, Login
 # Register your models here.
 
+
+class LoginAdmin(admin.ModelAdmin):
+    model = Login
+
+admin.site.register(Login, LoginAdmin)
 
 class CategoryInline(admin.TabularInline):
     model = Category

@@ -20,12 +20,14 @@ from django.conf import settings
 import os, sys
 BASE_PATH = os.path.dirname(os.getcwd())
 sys.path.append(BASE_PATH)
-from blog.views import IndexView, DetailView, ArchiveView, ArticleApiView
+from blog.views import IndexView, DetailView, ArchiveView, ArticleApiView, LoginView, RegisterView
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", IndexView.as_view()),
+    path("", LoginView.login),
+    path("register/", RegisterView.register),
+    path("myblog/", IndexView.as_view()),
     path("archives/", ArchiveView.as_view()),
     path("api/article/", ArticleApiView.as_view()),
     path("<str:year>/<str:month>/<str:day>/<str:uri>", DetailView.as_view()),

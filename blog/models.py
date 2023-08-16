@@ -1,9 +1,30 @@
+import hashlib
+
 from django.db import models
 from mdeditor.fields import MDTextField
 
 # Create your models here.
 
+
+class Login(models.Model):
+    objects = None
+    username = models.CharField(max_length=32, unique=True, null=True)
+    password = models.CharField(max_length=40)
+
+    class Meta:
+        db_table = "login"
+
+    def __str__(self):
+        return self.username
+
+    @classmethod
+    def encrypt_password(cls, password):
+        """使用SHA-1加密密码，返回长度为40的加密后的字符串。"""
+        return hashlib.sha1(password.encode()).hexdigest()
+
+
 class Article(models.Model):
+    objects = None
     title = models.CharField(max_length=200)
     text = MDTextField()
     url = models.CharField(max_length=200)
@@ -34,3 +55,4 @@ class Tag(models.Model):
 
     class Meta:
         db_table = "tag"
+
